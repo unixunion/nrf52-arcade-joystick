@@ -8,7 +8,7 @@ This is a simple bluetooth joystic control using nrf52.
 BLEDis bledis;
 BLEHidAdafruit blehid;
 
-// Array of pins and its keycode
+// Array of pins where buttons and joystick are wired, along with keycode array to follow.
 uint8_t pins[]    = { 11, A0, A1, A2, A3, A4, A5, 7, 15, 16, 31, 30};
 uint8_t hidcode[] = { HID_KEY_SHIFT_LEFT, HID_KEY_ARROW_UP, HID_KEY_ARROW_DOWN, HID_KEY_ARROW_LEFT ,HID_KEY_ARROW_RIGHT, HID_KEY_Q, HID_KEY_W, HID_KEY_RETURN, HID_KEY_Z, HID_KEY_X, HID_KEY_A, HID_KEY_S };
 uint8_t pincount = sizeof(pins)/sizeof(pins[0]);
@@ -180,5 +180,5 @@ void loop()
   }
 
   // Poll interval
-  delay(9);
+  delay(1);
 }
